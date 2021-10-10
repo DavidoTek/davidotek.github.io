@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>ProtonUp-Qt</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<h1 id="title">ProtonUp-Qt</h1>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="#home" id="home-link"><span class="icon solid fa-home">Home</span></a></li>
+								<li><a href="#screenshots" id="screenshots-link"><span class="icon solid fa-desktop">Screenshots</span></a></li>
+								<li><a href="#download" id="download-link"><span class="icon solid fa-download">Download</span></a></li>
+								<li><a href="#getinvolved" id="getinvolved-link"><span class="icon solid fa-envelope">Get Involved</span></a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+							<li><a href="https://github.com/DavidoTek/ProtonUp-Qt" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						</ul>
+
+				</div>
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Home -->
+					<section id="home" class="one dark cover">
+						<div class="container">
+
+							<header>
+								<h2 class="alt">ProtonUp-Qt</h2>
+								<p>Install and manage Proton-GE installations for Steam with this graphical user interface. <br />Based on AUNaseef's ProtonUp, made with Python 3 and Qt 6.</p>
+							</header>
+
+							<footer>
+								<a href="#download" class="button scrolly">Get ProtonUp-Qt</a>
+							</footer>
+
+						</div>
+					</section>
+
+				<!-- Screenshots -->
+					<section id="screenshots" class="two">
+						<div class="container">
+
+							<header>
+								<h2>Screenshots</h2>
+							</header>
+
+							<div class="row">
+								<div class="col-4 col-12-mobile">
+									<article class="item">
+										<a href="#" class="image fit"><img src="images/screenshot143_dark1.png" alt="" /></a>
+										<header>
+											<h3>Dark Theme</h3>
+										</header>
+									</article>
+								</div>
+								<div class="col-4 col-12-mobile">
+									<article class="item">
+										<a href="#" class="image fit"><img src="images/screenshot143_light1.png" alt="" /></a>
+										<header>
+											<h3>Light Theme</h3>
+										</header>
+									</article>
+								</div>
+							</div>
+
+						</div>
+					</section>
+
+				<!-- Download -->
+					<section id="download" class="three">
+						<div class="container">
+
+							<header>
+								<h2>Download ProtonUp-Qt</h2>
+							</header>
+
+							<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
+
+							<ol style="text-align: left;">
+								<li>Download the ProtonUp-Qt AppImage.</li>
+								<li>Mark the AppImage as executable (either using your file manager or using the Terminal: <code>chmod +x ProtonUp-Qt*.AppImage</code>)</li>
+								<li>Double-click the AppImage to run ProtonUp-Qt</li>
+								<li>(Optional: <a href="https://docs.appimage.org/user-guide/run-appimages.html#integrating-appimages-into-the-desktop">Integrate the AppImage into your desktop</a>. More information about AppImages <a href="https://docs.appimage.org/user-guide/index.html">here</a>)</li>
+							</ol>
+
+							<a id="download_button" class="button scrolly">Download ProtonUp-Qt</a>
+							
+							<script>
+								var ghapi_url = 'https://api.github.com/repos/DavidoTek/ProtonUp-Qt/releases';
+
+								fetch(ghapi_url)
+									.then(response => response.json())
+									.then(json => {
+										let download_url = 'https://github.com/DavidoTek/ProtonUp-Qt/releases/download/' + json[0].tag_name + '/' + json[0].assets[0].name;
+										
+										let download_button = document.getElementById('download_button');
+										download_button.href = download_url;
+										download_button.innerHTML = '<div><span style="vertical-align:middle;">Download ProtonUp-Qt ' + json[0].tag_name + '</span> <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/App-image-logo.svg" height="48px" style="vertical-align:middle;" /></div>';
+									})
+									.catch(function () {
+										let download_button = document.getElementById('download_button');
+										download_button.href = 'https://github.com/DavidoTek/ProtonUp-Qt/releases/';
+										download_button.text = 'Download ProtonUp-Qt';
+									});
+							</script>
+
+						</div>
+					</section>
+
+				<!-- Get Involved -->
+					<section id="getinvolved" class="four">
+						<div class="container">
+
+							<header>
+								<h2>Get Involved</h2>
+							</header>
+
+							<p>Report issues or create pull requests on <a href="https://github.com/DavidoTek/ProtonUp-Qt">ProtonUp-Qt's GitHub Repo</a>.</p>
+
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>Copyright &copy; DavidoTek 2021</li><li>Web-Design: Prologue by <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
