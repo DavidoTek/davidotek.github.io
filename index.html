@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Software projects by DavidoTek – ProtonUp-Qt, protondl, Educational RSA Calculator, ÖPNV Projekt Tracker, unimo, and more.">
+  <meta name="keywords" content="DavidoTek, software, open source, linux, protonup-qt, pupgui2, networking">
+  <meta name="author" content="DavidoTek">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="DavidoTek – Software Projects">
+  <meta property="og:description" content="Software projects by DavidoTek – ProtonUp-Qt, protondl, Educational RSA Calculator, ÖPNV Projekt Tracker, unimo, and more.">
+  <meta property="og:url" content="https://davidotek.github.io/">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="DavidoTek – Software Projects">
+  <meta name="twitter:description" content="Software projects by DavidoTek – ProtonUp-Qt, protondl, Educational RSA Calculator, ÖPNV Projekt Tracker, unimo, and more.">
+
+  <title>DavidoTek – Software Projects</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f5f7fa;
+      color: #1a1a2e;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1.5rem;
+    }
+
+    .container {
+      max-width: 720px;
+      width: 100%;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #0f0f1a;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      color: #5a5a7a;
+      font-size: 1.05rem;
+    }
+
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #8888aa;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid #e0e4ec;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.3rem 1.5rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .card .btn-web {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.3rem 0.65rem;
+      border-radius: 8px;
+      background: #eef0f6;
+      color: #5a5a7a;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-decoration: none;
+      line-height: 1;
+      transition: background 0.15s;
+    }
+
+    .card .btn-web:hover {
+      background: #dce0ec;
+      color: #1a1a2e;
+    }
+
+    .card .btn-web svg {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .card h3 a {
+      color: #1a1a2e;
+      text-decoration: none;
+    }
+
+    .card h3 a:hover {
+      color: #3b82f6;
+    }
+
+    .badge {
+      font-size: 0.65rem;
+      font-weight: 600;
+      padding: 0.15rem 0.5rem;
+      border-radius: 20px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .badge-active {
+      background: #d4edda;
+      color: #155724;
+    }
+
+    .badge-wip {
+      background: #fff3cd;
+      color: #856404;
+    }
+
+    .badge-archived {
+      background: #e2e3e5;
+      color: #383d41;
+    }
+
+    .badge-poc {
+      background: #e8dff5;
+      color: #5a2e8a;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #4a4a6a;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.5rem;
+    }
+
+    .tag {
+      font-size: 0.75rem;
+      font-weight: 500;
+      padding: 0.2rem 0.6rem;
+      border-radius: 20px;
+      background: #eef0f6;
+      color: #5a5a7a;
+    }
+
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      color: #8888aa;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>DavidoTek</h1>
+      <p>Software Projects</p>
+    </header>
+
+    <section>
+      <div class="section-title">Gaming</div>
+
+      <div class="card">
+        <h3><a href="https://davidotek.github.io/protonup-qt/">ProtonUp-Qt</a><span class="badge badge-active">Active</span></h3>
+        <p>Install Wine- and Proton-based compatibility tools for Steam, Lutris, Heroic Games Launcher and more to enjoy your favorite games on Linux and Steam Deck!</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Qt</span></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Libraries</div>
+
+      <div class="card">
+        <h3><a href="https://davidotek.github.io/protondl/">protondl</a><span class="badge badge-wip">WIP</span></h3>
+        <p>Modern Python library and CLI for managing Steam &amp; Linux gaming compatibility tools. A headless, async-first library alternative to ProtonUp-Qt.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">CLI</span></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Educational</div>
+
+      <div class="card">
+        <h3><a href="https://github.com/DavidoTek/ipchklab/">IP Checksum Lab</a><span class="badge badge-archived">Archived</span></h3>
+        <p>Web application for calculating IPv4/IPv6/UDP/TCP checksums and checksum deltas. Ideal for university classes or to verify checksums while debugging.</p>
+        <div class="tags"><span class="tag">Web</span><span class="tag">Networking</span></div>
+        <a class="btn-web" href="https://davidotek.github.io/ipchklab/">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+          Open Web App
+        </a>
+      </div>
+
+      <div class="card">
+        <h3><a href="https://github.com/DavidoTek/rsa-calc-edu/">Educational RSA Calculator</a><span class="badge badge-archived">Archived</span></h3>
+        <p>Web application that demonstrates RSA encryption using the <em>Extended Euclidean Algorithm</em> and the <em>Square-and-Multiply</em> algorithm.</p>
+        <div class="tags"><span class="tag">Web</span><span class="tag">Cryptography</span></div>
+        <a class="btn-web" href="https://davidotek.github.io/rsa-calc-edu/">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+          Open Web App
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Networking</div>
+
+      <div class="card">
+        <h3><a href="https://github.com/DavidoTek/p4-utils-workstation-vm">Vagrant VM with ETHZ P4-Utils</a><span class="badge badge-archived">Archived</span></h3>
+        <p>Vagrant Virtual Machine based on Xubuntu that includes ETH-Zürich P4-Utils for developing and testing P4 data plane applications. PicoQUIC and Visual Studio Code are included.</p>
+        <div class="tags"><span class="tag">Vagrant</span><span class="tag">P4</span></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Transportation</div>
+
+      <div class="card">
+        <h3><a href="https://github.com/DavidoTek/unimo-vibe-poc">unimo – Universal Mobility Navigator</a><span class="badge badge-poc">PoC</span></h3>
+        <p>Vibe-coded mobile and desktop app prototype for universal mobility. Combines public transport routing with e-scooter, bicycle, and car rental search.</p>
+        <div class="tags"><span class="tag">TypeScript</span><span class="tag">React</span><span class="tag">Web</span></div>
+        <a class="btn-web" href="https://davidotek.github.io/unimo-vibe-poc/">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+          Open Web App
+        </a>
+      </div>
+
+      <div class="card">
+        <h3><a href="https://github.com/DavidoTek/oepnv-projekt-tracker">ÖPNV Projekt Tracker</a><span class="badge badge-wip">WIP</span></h3>
+        <p>Web application for tracking public transport (ÖPNV) construction and expansion projects in Germany. Browse, filter, and contribute to a structured database of new-build and reactivation projects.</p>
+        <div class="tags"><span class="tag">TypeScript</span><span class="tag">Next.js</span><span class="tag">Web</span></div>
+        <a class="btn-web" href="https://davidotek.github.io/oepnv-projekt-tracker/">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+          Open Web App
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 - today DavidoTek &middot; <a href="https://github.com/DavidoTek" style="color:#8888aa;">GitHub</a></p>
+    </footer>
+  </div>
+  <script>
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('click', function(e) {
+        if (e.target.closest('a')) return;
+        const link = this.querySelector('h3 a');
+        if (link) location.href = link.href;
+      });
+    });
+  </script>
+</body>
+</html>
